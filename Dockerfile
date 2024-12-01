@@ -32,5 +32,5 @@ RUN git clone --branch 3.4.0 https://gitlab.com/libeigen/eigen.git /opt/eigen \
     && cd /opt && rm -r /opt/eigen
 
 # Set working directory to /app
-RUN mkdir -p /home/mpc-driving 
-WORKDIR /home/mpc-driving
+RUN mkdir -p /home/maybe-docker 
+WORKDIR /home/maybe-docker
