@@ -14,6 +14,7 @@ RUN echo 'Etc/UTC' > /etc/timezone \
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     cmake \
+	clang-format \
     g++ \
     git \
     wget \
