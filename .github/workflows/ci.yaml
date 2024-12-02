@@ -2,7 +2,9 @@ name: Testing
 
 on:
   push:
-  pull_request:
+      - 'src/**'    
+      - 'tests/**'
+      - 'CMakeLists.txt'
 
 jobs:
   build:
