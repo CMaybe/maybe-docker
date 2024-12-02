@@ -2,9 +2,13 @@ name: Testing
 
 on:
   push:
+    branches: "main"
+    paths: 
       - 'src/**'    
       - 'tests/**'
       - 'CMakeLists.txt'
+      - '.github/workflows/ci.yaml'
+
 
 jobs:
   build:
