@@ -23,7 +23,7 @@ This repository is configured with a `devcontainer` for Visual Studio Code, allo
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/maybe-docker.git
+git clone https://github.com/CMaybe/maybe-docker.git
 cd maybe-docker
 code .
 ```
@@ -48,6 +48,17 @@ cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Debug
 cmake --build build --config Debug
 cd build
 ctest -C Debug --output-on-failure --verbose
+```
+
+
+### 5. build docker and push to ghcr
+```bash
+docker build -t docker-example:latest .
+docker tag docker-example:latest ghcr.io/{user_name}/docker-example:latest
+docker push ghcr.io/{user_name}/docker-example:latest
+
+# your have to set permissions
+# change .github/workflows/ci.yml to using your image
 ```
 
 GitHub Actions for CI
@@ -79,8 +90,8 @@ maybe-docker/
 └── external/
     └── googletest/         # Google Test as a submodule
 ```
-.github/workflows/ci.yml: The CI configuration for GitHub Actions.
 
+`.github/workflows/ci.yml`: The CI configuration for GitHub Actions.
 `Dockerfile`: The Docker configuration for building and running the project. \
 `CMakeLists.txt`: The CMake configuration for building the project. \
 `src/example.cpp`: The main application source code that uses Eigen for linear algebra operations. \
