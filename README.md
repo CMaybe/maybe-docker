@@ -81,11 +81,11 @@ maybe-docker/
 ```
 .github/workflows/ci.yml: The CI configuration for GitHub Actions.
 
-Dockerfile: The Docker configuration for building and running the project.
-CMakeLists.txt: The CMake configuration for building the project.
-src/example.cpp: The main application source code that uses Eigen for linear algebra operations.
-tests/test.cpp: Unit tests using Google Test to test the Eigen-based code.
-License
+`Dockerfile`: The Docker configuration for building and running the project. \
+`CMakeLists.txt`: The CMake configuration for building the project. \
+`src/example.cpp`: The main application source code that uses Eigen for linear algebra operations. \
+`tests/test.cpp`: Unit tests using Google Test to test the Eigen-based code. \
+`License`: 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
